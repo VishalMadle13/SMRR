@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "b37b384d-b418-4ac6-9875-92ec9155ad79",
+		"name": "Smart Rest Room",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IOT",
+			"item": [
+				{
+					"name": "IOT Log Data GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/iot/data/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"iot",
+								"data",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "IOT Log Data GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/iot/data/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"iot",
+										"data",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 30 Nov 2022 13:23:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, GET, POST"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1097"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"log_id\": 1,\n        \"time\": \"18:33:52.913374\",\n        \"gas01\": \"0.10000000\",\n        \"gas02\": \"4.10000000\",\n        \"gas03\": \"3.10000000\",\n        \"gas04\": \"2.10000000\",\n        \"room_id\": \"r1\"\n    },\n    {\n        \"log_id\": 2,\n        \"time\": \"18:39:27.043213\",\n        \"gas01\": \"0.10000000\",\n        \"gas02\": \"4.10000000\",\n        \"gas03\": \"3.10000000\",\n        \"gas04\": \"2.10000000\",\n        \"room_id\": \"r1\"\n    },\n    {\n        \"log_id\": 3,\n        \"time\": \"18:40:41.093751\",\n        \"gas01\": \"0.10000000\",\n        \"gas02\": \"4.10000000\",\n        \"gas03\": \"3.10000000\",\n        \"gas04\": \"2.10000000\",\n        \"room_id\": \"r1\"\n    },\n    {\n        \"log_id\": 4,\n        \"time\": \"18:41:55.252807\",\n        \"gas01\": \"0.10000000\",\n        \"gas02\": \"4.10000000\",\n        \"gas03\": \"3.10000000\",\n        \"gas04\": \"2.10000000\",\n        \"room_id\": \"r1\"\n    },\n    {\n        \"log_id\": 5,\n        \"time\": \"18:43:49.125275\",\n        \"gas01\": \"3.10000000\",\n        \"gas02\": \"4.10000000\",\n        \"gas03\": \"3.10000000\",\n        \"gas04\": \"2.10000000\",\n        \"room_id\": \"r1\"\n    },\n    {\n        \"log_id\": 6,\n        \"time\": \"18:45:51.855254\",\n        \"gas01\": \"3.10000000\",\n        \"gas02\": \"4.10000000\",\n        \"gas03\": \"3.10000000\",\n        \"gas04\": \"2.10000000\",\n        \"room_id\": \"r2\"\n    },\n    {\n        \"log_id\": 7,\n        \"time\": \"18:47:09.243875\",\n        \"gas01\": \"3.10000000\",\n        \"gas02\": \"4.10000000\",\n        \"gas03\": \"3.10000000\",\n        \"gas04\": \"2.10000000\",\n        \"room_id\": \"r2\"\n    },\n    {\n        \"log_id\": 8,\n        \"time\": \"18:52:41.461416\",\n        \"gas01\": \"5.40000000\",\n        \"gas02\": \"3.70000000\",\n        \"gas03\": \"1.50000000\",\n        \"gas04\": \"0.20000000\",\n        \"room_id\": \"r2\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "IOT sends Gas Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \r\n        \"room_id\": \"r2\",\r\n        \"room_no\" : \"2\",\r\n        \"gas01\": \"5.4\",\r\n        \"gas02\": \"3.7\",\r\n        \"gas03\": \"1.5\",\r\n        \"gas04\": \"0.2\"\r\n         \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/iot/data/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"iot",
+								"data",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "IOT sends Gas Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n      \r\n        \"room_id\": \"r2\",\r\n        \"room_no\" : \"2\",\r\n        \"gas01\": \"5.4\",\r\n        \"gas02\": \"3.7\",\r\n        \"gas03\": \"1.5\",\r\n        \"gas04\": \"0.2\"\r\n         \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/iot/data/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"iot",
+										"data",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 30 Nov 2022 13:22:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, GET, POST"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"msg\": \"Data Created\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "External Application",
+			"item": [
+				{
+					"name": "GET All Room States",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/app/room/status",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"app",
+								"room",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET All Room States",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/app/room/status",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"app",
+										"room",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 30 Nov 2022 13:25:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, GET, POST"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"room_id\": \"r1\",\n        \"gas01\": \"3.10000000\",\n        \"gas02\": \"4.10000000\",\n        \"gas03\": \"3.10000000\",\n        \"gas04\": \"2.10000000\",\n        \"state\": \"3\",\n        \"room_no\": 2\n    },\n    {\n        \"room_id\": \"r2\",\n        \"gas01\": \"5.40000000\",\n        \"gas02\": \"3.70000000\",\n        \"gas03\": \"1.50000000\",\n        \"gas04\": \"0.20000000\",\n        \"state\": \"1\",\n        \"room_no\": 2\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET Particular Room State",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/app/room/status/r2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"app",
+								"room",
+								"status",
+								"r2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET Particular Room State",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/app/room/status/r2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"app",
+										"room",
+										"status",
+										"r2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 30 Nov 2022 13:27:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS, GET, POST"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"room_id\": \"r2\",\n    \"gas01\": \"5.40000000\",\n    \"gas02\": \"3.70000000\",\n    \"gas03\": \"1.50000000\",\n    \"gas04\": \"0.20000000\",\n    \"state\": \"1\",\n    \"room_no\": 2\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
