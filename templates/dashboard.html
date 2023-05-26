@@ -1,0 +1,356 @@
+<!-- dashboard.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+        <h3>Restroom Monitoring Dashboard</h3>
+        <hr>
+
+
+        <div class="card   mb-4">
+            <!-- Notifications Panel --> 
+            <div class="card-header">
+                <h4>Notifications</h4>
+            </div>
+                <div class="card-body">
+                    <h6 class="card-title">Notifications Panel</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span class="text-danger">System Alert:</span> High level of uncleanliness in Room 101.
+                        </li>
+                        <li class="list-group-item">
+                            <span class="text-info">Supervisor Action:</span> Supervisor John has assigned a labor to clean Room 102.
+                        </li>
+                        <li class="list-group-item">
+                            <span class="text-success">Room Cleaned:</span> Room 103 has been cleaned successfully.
+                        </li>
+                        <!-- Add more notifications as needed -->
+                    </ul>
+                </div>
+            </div> 
+        </div>
+
+
+
+
+
+    <div class="row mb-4 mt-5">
+        <div class="col col-lg-8 ">
+            <div class="card  mb-2">
+                <div class="card-header">
+                    <h4>Overall Status Widget</h4>
+                </div>
+                <div class="card-body">
+                    <div class="progress">
+                        <div class="progress-bar bg-success rounded-pill" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            75%
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            
+            <div class="card">
+                <!-- Room Status Cards -->
+                <div class="card-header">
+                    <h4>Room Status</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 101</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-success">Clean</span></p>
+                                    <p class="card-text">Last Cleaned: May 20, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 102</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-warning">Moderate</span></p>
+                                    <p class="card-text">Last Cleaned: May 19, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 104</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-warning">Moderate</span></p>
+                                    <p class="card-text">Last Cleaned: May 18, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 105</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-success">Clean</span></p>
+                                    <p class="card-text">Last Cleaned: May 20, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 106</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-warning">Moderate</span></p>
+                                    <p class="card-text">Last Cleaned: May 19, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 107</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-danger">Dirty</span></p>
+                                    <p class="card-text">Last Cleaned: May 18, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 108</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-success">Clean</span></p>
+                                    <p class="card-text">Last Cleaned: May 20, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 109</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-success">Clean</span></p>
+                                    <p class="card-text">Last Cleaned: May 19, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Room 110</h5>
+                                    <p class="card-text">Cleanliness Level: <span class="text-danger">Dirty</span></p>
+                                    <p class="card-text">Last Cleaned: May 18, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col col-lg-4">
+                <div>
+                    <!-- Monthly Usage Chart -->
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h4>Monthly Usage Chart</h4>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="monthlyUsageChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            
+                <div>
+                    <!-- Historical Data Chart --> 
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h4>Historical Data Chart</h4>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="historicalDataChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+ 
+
+
+
+    <div class="row">
+    <div class="col-lg-12">
+        <!-- Tabular View of Rooms -->
+        <div class="card mb-4">
+            <div class="card-header">
+                    <h4>Tabular View of Rooms</h4>
+            </div> 
+            <div class="card-body">
+                <table class="table table-striped" style="fon" >
+                    <thead>
+                        <tr>
+                            <th>Room Name</th>
+                            <th>Cleanliness Level</th>
+                            <th>Last Cleaned</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Room 101</td>
+                            <td>Clean</td>
+                            <td>May 20, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Room 102</td>
+                            <td>Moderate</td>
+                            <td>May 19, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Room 104</td>
+                            <td>Dirty</td>
+                            <td>May 18, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Room 105</td>
+                            <td>Clean</td>
+                            <td>May 20, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Room 106</td>
+                            <td>Moderate</td>
+                            <td>May 19, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Room 107</td>
+                            <td>Dirty</td>
+                            <td>May 18, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Room 108</td>
+                            <td>Clean</td>
+                            <td>May 20, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Room 109</td>
+                            <td>Moderate</td>
+                            <td>May 19, 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Room 110</td>
+                            <td>Dirty</td>
+                            <td>May 18, 2023</td>
+                        </tr>
+                        <!-- Add more rows for each room data -->
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- script for  Historical Data Chart -->
+    <script> 
+        // Get the chart canvas element
+        var historicalDataChartCanvas = document.getElementById('historicalDataChart').getContext('2d');
+
+        // Define the chart data and options
+        var historicalDataChartData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [
+                {
+                    label: 'Cleanliness Level',
+                    data: [70, 75, 80, 85, 90, 85],
+                    fill: false,
+                    borderColor: 'rgba(0, 123, 255, 1)',
+                    tension: 0.4
+                },
+            ]
+        };
+
+        var historicalDataChartOptions = {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 10
+                    }
+                }
+            }
+        };
+
+        // Create the chart
+        var historicalDataChart = new Chart(historicalDataChartCanvas, {
+            type: 'line',
+            data: historicalDataChartData,
+            options: historicalDataChartOptions
+        });
+    </script>
+
+
+
+    <!-- script for monthlyUsageChart Data Chart -->
+    <script>
+        // Get the chart canvas element
+        var monthlyUsageChartCanvas = document.getElementById('monthlyUsageChart').getContext('2d');
+
+        // Define the chart data and options
+        var monthlyUsageChartData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'Usage',
+                data: [50, 80, 70, 60, 90, 75],
+                backgroundColor: 'rgba(0, 123, 255, 0.5)',
+                borderColor: 'rgba(0, 123, 255, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        var monthlyUsageChartOptions = {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 10
+                    }
+                }
+            }
+        };
+
+        // Create the chart
+        var monthlyUsageChart = new Chart(monthlyUsageChartCanvas, {
+            type: 'bar',
+            data: monthlyUsageChartData,
+            options: monthlyUsageChartOptions
+        });
+    </script>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+

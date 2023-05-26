@@ -7,7 +7,7 @@ from .models import room_state
 
  
 class roomStateAdmin(admin.ModelAdmin):
-    list_display = ['room_id','gas01','gas02','gas03','gas04','state','room_no']
+    list_display = ['room_id','gas01','gas02','gas03','gas04','state']
  
 #..............................................#
  

@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import recall_score,f1_score,precision_score,accuracy_score,precision_recall_fscore_support
 
 # load the Iris dataset
-data = pd.read_csv('D:\PROJECTS\MP3\SMART_REST_ROOM (3)\SMART_REST_ROOM\MP1\SMART_REST_ROOM\CORE\smrr_core\iot\dataset.csv')
+data = pd.read_csv('D:\PROJECTS//MP//MP3//ultron//smrr//iot//dataset.csv')
 
 # split the data into features (X) and target (y)
 X = data.drop('state', axis=1)

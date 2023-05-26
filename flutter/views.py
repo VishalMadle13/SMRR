@@ -30,12 +30,11 @@ from rest_framework.decorators import authentication_classes,permission_classes
 
 #......................................................................................................#
 
-
 @api_view(['GET','POST'])
 @authentication_classes([BasicAuthentication])
 @permission_classes([IsAuthenticated])
 
-#..............................room_statu...................................................................#
+#..............................room_status...................................................................#
 
 
 def room_status(request,pk=None):

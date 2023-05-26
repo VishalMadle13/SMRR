@@ -1,0 +1,48 @@
+<!-- monthly_report.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Report - Restroom Monitoring</title>
+    <style>
+        /* Add custom CSS for styling the report */
+        /* ... */
+    </style>
+</head>
+<body>
+    <h1>Monthly Report - Restroom Monitoring</h1>
+    <hr>
+
+    <h2>Summary</h2>
+    <p>Number of Rooms: {{ num_rooms }}</p>
+    <p>Hygienic Rooms: {{ num_hygienic_rooms }}</p>
+    <p>Unhygienic Rooms: {{ num_unhygienic_rooms }}</p>
+    <p>Very Unhygienic Rooms: {{ num_very_unhygienic_rooms }}</p>
+    <p>Average Cleanliness Rating: {{ avg_cleanliness_rating }}</p>
+    <!-- Add more summary information as needed -->
+
+    <h2>Actions</h2>
+    <h3>Labor Actions</h3>
+    <ul>
+        {% for labor_action in labor_actions %}
+            <li>{{ labor_action }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Supervisor Actions</h3>
+    <ul>
+        {% for supervisor_action in supervisor_actions %}
+            <li>{{ supervisor_action }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Add more sections for other metrics and data -->
+
+    <h2>Graphs and Charts</h2>
+    <!-- Add graphs and charts to visualize data if necessary -->
+    <!-- ... -->
+
+    <!-- Add any additional sections or information as needed -->
+
+</body>
+</html>
