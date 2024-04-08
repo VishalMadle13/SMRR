@@ -1,4 +1,4 @@
-## Smart Rest Room Project
+## Smart Restroom Hygiene System
 
 - **Objective:** To create an IoT-driven solution for real-time restroom cleanliness assessment through odour detection and integrated machine learning for air quality analysis.
 
