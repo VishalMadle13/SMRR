@@ -16,7 +16,7 @@ from flutter.models import room_state
 from flutter.serializers import RoomStateSerializer
 from management.send_sms import SendMessage
 from management.models import RoomLabour,Labour,Room
-
+import datetime
 #........................................................................#
 
 # from .model import Model
@@ -82,7 +82,7 @@ def iot_gas_data(request):
 # ..............................POST.....................................#
 
     if request.method == 'POST':
-        try:
+        # try:
             data = request.data
             room_id = data['room_id'] 
             gas01 = data['gas01']
@@ -128,7 +128,7 @@ def iot_gas_data(request):
                 dt = room_state(room_id = room_obj, gas01 = g1, gas02 = g2 , gas03 = g3 , gas04 = g4, state = state)
                 dt.save() 
             else:
-                room_state.objects.filter(room_id=room_obj).update(room_id=room_id,gas01=gas01,gas02=gas02,gas03=gas03,gas04=gas04,state=state)
+                room_state.objects.filter(room_id=room_obj).update(room_id=room_id,gas01=gas01,gas02=gas02,gas03=gas03,gas04=gas04,state=state, time=datetime.datetime.utcnow())
 
 
             serializerlog = IotLogSerializer(data=data) 
@@ -137,9 +137,9 @@ def iot_gas_data(request):
                 return Response({'success': True, 'msg': 'Data Created'},status=status.HTTP_201_CREATED)
             return Response(serializerlog.errors, status=status.HTTP_400_BAD_REQUEST)
         
-        except Exception as e:
-            print(e)
-            return Response({'success': False, 'msg': 'Error!!'}, status=status.HTTP_400_BAD_REQUEST)
+        # except Exception as e:
+        #     print(e)
+        #     return Response({'success': False, 'msg': 'Error!!'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 # .........................................................................................................#

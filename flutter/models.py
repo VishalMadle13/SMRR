@@ -10,6 +10,7 @@ class room_state(models.Model):
     gas03  = models.DecimalField(("gas03"), max_digits=12, decimal_places=8)
     gas04  = models.DecimalField(("gas04"), max_digits=12, decimal_places=8)
     state  = models.CharField(("state"), max_length=50)
+    time   = models.TimeField(("time"), null=True)
 
     
 

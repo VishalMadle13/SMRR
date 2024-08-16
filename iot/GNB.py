@@ -7,7 +7,7 @@ import warnings
 class Model():
     def RoomState(lst):
             # load the Iris dataset
-            data = pd.read_csv('D:\PROJECTS//MP//MP3//ultron//smrr//iot//dataset.csv')
+            data = pd.read_csv('dataset.csv')
 
             # split the data into features (X) and target (y)
             X = data.drop('state', axis=1)

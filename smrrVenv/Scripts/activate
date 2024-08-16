@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\PROJECTS\MP3\Smart_Rest_Room\smrr\smrrVenv"
+VIRTUAL_ENV="D:\PROJECTS\SMRR\smrrVenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

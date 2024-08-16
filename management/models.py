@@ -5,18 +5,18 @@ from django.db import models
 class Labour(models.Model):
     labour_id = models.CharField("labour_id", max_length=50, primary_key=True)
     labour_name = models.CharField("labour_name", max_length=50)
-    phone_no = models.PositiveIntegerField("labour_phone_no")
+    phone_no = models.BigIntegerField("labour_phone_no")
 
 class Supervisor(models.Model):
     supervisor_id = models.CharField("supervisor_id", max_length=50, primary_key=True)
     supervisor_name = models.CharField("supervisor_name", max_length=50)
-    phone_no = models.PositiveIntegerField("supervisor_phone_no")
+    phone_no = models.PositiveBigIntegerField("supervisor_phone_no")
     email = models.EmailField("supervisor_email", max_length=254)
 
 class Manager(models.Model):
     manager_id = models.CharField("manager_id", max_length=50, primary_key=True)
     manager_name = models.CharField("manager_name", max_length=50)
-    phone_no = models.PositiveIntegerField("manager_phone_no")
+    phone_no = models.PositiveBigIntegerField("manager_phone_no")
     email = models.EmailField("manager_email", max_length=254)
 
 class Room(models.Model):

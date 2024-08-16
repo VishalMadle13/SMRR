@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 class Model():
 
   def RoomState(lst):
-              df = pd.read_csv('D:\PROJECTS\MP3\SMART_REST_ROOM (3)\SMART_REST_ROOM\MP1\SMART_REST_ROOM\CORE\smrr_core\iot\dataset.csv')
+              df = pd.read_csv('dataset.csv')
               X = df.drop([df.columns[-1]], axis = 1)
               # print(X)
               y = df[df.columns[-1]]

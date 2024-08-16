@@ -4,3 +4,6 @@ django-cors-headers
 pandas
 scikit-learn
 vonage
+cffi
+gunicorn>=20.1.0
+mysql-connector-python
