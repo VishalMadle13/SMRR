@@ -17,8 +17,10 @@
 
  
 ## SMRR Dashboard
-![Dashboard](https://github.com/VishalMadle13/smrr/blob/main/smrr_dashboard.png)
-![UI](https://github.com/VishalMadle13/smrr/blob/main/smrr_dashboard01.png)
+![Dashboard](https://github.com/VishalMadle13/smrr/blob/main/Screenshot01.png)
+![UI](https://github.com/VishalMadle13/smrr/blob/main/Screenshot02.png)
+![UI](https://github.com/VishalMadle13/smrr/blob/main/Screenshot03.png)
+![UI](https://github.com/VishalMadle13/smrr/blob/main/Screenshot04.png)
 
 ## Source Code
 ![Code](https://github.com/VishalMadle13/smrr/blob/main/source_code.png)
