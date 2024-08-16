@@ -30,13 +30,14 @@ To set up and run the Smart Restroom Hygiene System locally, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/smart-restroom-hygiene-system.git
-   cd smart-restroom-hygiene-system
+   git clone https://github.com/vishalmadle13/smrr.git
+   cd smrr
    ```
 2. **Create a Virtual Environment:**
  ``` 
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+python -m venv smrrVenv
+source venv/bin/activate
+# On Windows, use `venv\Scripts\activate`
  ```
 
 3. **Install Dependencies:**
