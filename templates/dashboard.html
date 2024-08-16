@@ -17,13 +17,13 @@
                     <h6 class="card-title">Notifications Panel</h6>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
-                            <span class="text-danger">System Alert:</span> High level of uncleanliness in Room 101.
+                            <span class="text-danger">System Alert:</span> {{unhygenicRoomsCount }} Rooms are unhygenic!!
                         </li>
                         <li class="list-group-item">
-                            <span class="text-info">Supervisor Action:</span> Supervisor John has assigned a labor to clean Room 102.
+                            <span class="text-info">Supervisor Action:</span> Supervisor John has assigned a labor to clean Room 103.
                         </li>
                         <li class="list-group-item">
-                            <span class="text-success">Room Cleaned:</span> Room 103 has been cleaned successfully.
+                            <span class="text-success">Room Cleaned:</span> Room {{recent_cleaned_room}} has been cleaned recently.
                         </li>
                         <!-- Add more notifications as needed -->
                     </ul>
@@ -43,9 +43,10 @@
                 </div>
                 <div class="card-body">
                     <div class="progress">
-                        <div class="progress-bar bg-success rounded-pill" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            75%
-                        </div>
+                        <div class="progress-bar bg-success rounded-pill" role="progressbar" style="width: {{ hygenicRooms }}%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            {{ hygenicRooms }}% hygenic
+                    
+                        </div> 
                     </div>
                 </div>
             </div>  
@@ -57,87 +58,25 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
+                        {% for room in allRoomData %}
                         <div class="col-md-4 mb-4">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Room 101</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-success">Clean</span></p>
-                                    <p class="card-text">Last Cleaned: May 20, 2023</p>
+                                    <h5 class="card-title">Room {{ room.1.room_no }}</h5>
+                                    <p class="card-text">Cleanliness Level: 
+                                        {% if room.2.state == 'clean' %}
+                                            <span class="text-success">{{ room.2.state }}</span>
+                                        {% elif room.2.state == 'moderate' %}
+                                            <span class="text-warning">{{ room.2.state }}</span>
+                                        {% elif room.2.state == 'unhygenic' %}
+                                            <span class="text-danger">{{ room.2.state }}</span>
+                                        {% endif %}
+                                    </p>
+                                    <p class="card-text">Last updated time: {{room.3.time}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Room 102</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-warning">Moderate</span></p>
-                                    <p class="card-text">Last Cleaned: May 19, 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Room 104</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-warning">Moderate</span></p>
-                                    <p class="card-text">Last Cleaned: May 18, 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Room 105</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-success">Clean</span></p>
-                                    <p class="card-text">Last Cleaned: May 20, 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Room 106</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-warning">Moderate</span></p>
-                                    <p class="card-text">Last Cleaned: May 19, 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Room 107</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-danger">Dirty</span></p>
-                                    <p class="card-text">Last Cleaned: May 18, 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Room 108</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-success">Clean</span></p>
-                                    <p class="card-text">Last Cleaned: May 20, 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Room 109</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-success">Clean</span></p>
-                                    <p class="card-text">Last Cleaned: May 19, 2023</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Room 110</h5>
-                                    <p class="card-text">Cleanliness Level: <span class="text-danger">Dirty</span></p>
-                                    <p class="card-text">Last Cleaned: May 18, 2023</p>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
@@ -190,56 +129,17 @@
                         <tr>
                             <th>Room Name</th>
                             <th>Cleanliness Level</th>
-                            <th>Last Cleaned</th>
+                            <th>Last Updated Time</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for room in allRoomData %}
                         <tr>
-                            <td>Room 101</td>
-                            <td>Clean</td>
-                            <td>May 20, 2023</td>
+                            <td>Room {{room.1.room_no}}</td>
+                            <td>{{room.2.state}}</td>
+                            <td>{{room.3.time}}</td>
                         </tr>
-                        <tr>
-                            <td>Room 102</td>
-                            <td>Moderate</td>
-                            <td>May 19, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>Room 104</td>
-                            <td>Dirty</td>
-                            <td>May 18, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>Room 105</td>
-                            <td>Clean</td>
-                            <td>May 20, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>Room 106</td>
-                            <td>Moderate</td>
-                            <td>May 19, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>Room 107</td>
-                            <td>Dirty</td>
-                            <td>May 18, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>Room 108</td>
-                            <td>Clean</td>
-                            <td>May 20, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>Room 109</td>
-                            <td>Moderate</td>
-                            <td>May 19, 2023</td>
-                        </tr>
-                        <tr>
-                            <td>Room 110</td>
-                            <td>Dirty</td>
-                            <td>May 18, 2023</td>
-                        </tr>
-                        <!-- Add more rows for each room data -->
+                        {% endfor %} 
                     </tbody>
                 </table>
             </div>

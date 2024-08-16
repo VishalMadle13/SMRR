@@ -86,7 +86,7 @@ DATABASES = {
     # ,    
     'default': {
         'ENGINE': 'mysql.connector.django', 
-        'NAME': 'test',
+        'NAME': 'srrhs',
         'USER': 'root',
         'PASSWORD': 'Pass@12345',
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
